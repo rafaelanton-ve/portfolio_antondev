@@ -12,8 +12,6 @@ This project leverages **Astro v5-beta**, incorporating the latest features that
 
 ## 🔥 DEMO
 
-- [VIEW DEMO](https://simple-portfolio.vicbox.dev)
-
 ### Features
 
 - **Astro v5-beta**: Utilizes the latest features of Astro for a fast and optimized static site.
@@ -22,11 +20,6 @@ This project leverages **Astro v5-beta**, incorporating the latest features that
 - **TypeScript**: Written in TypeScript for type safety and better developer tooling.
 - **React Components**: Supports React components to provide a familiar component-based development workflow.
 - **MDX Support**: Includes MDX support for writing content with Markdown and JSX.
-
-### Figma Design
-
-This project is based on the following Figma
-design: [Simple Resume Portfolio](https://www.figma.com/community/file/1213010685692032886/simple-resume-portfolio).
 
 ## Table of Contents
 
@@ -121,25 +114,6 @@ table explaining the properties of each object:
 | author      | string | The author of the site.                                |
 | profile     | string | The url of the online profile of the author.           |
 
-#### Example:
-
-```typescript
-export const SITE = {
-    website: "https://vicbox.dev/projects/simple-portfolio", // replace this with your deployed domain
-    title: "Simple Portfolio",
-    description: "A simple but beautiful portfolio created with Astro",
-    tags: ["portfolio", "Resume cv", "Astro"],
-    ogImage: "/og-image.webp",
-    logo: "logo",
-    logoText: "SPortfolio",
-    lang: "en",
-    favicon: "/favicon.png",
-    repository: "https://github.com/vito8916/simple-portfolio.git",
-    author: "Victor Alvarado",
-    profile: "https://victoralvarado.dev/",
-}
-````
-
 ---
 
 #### ME
@@ -155,35 +129,6 @@ table explaining the properties of each object:
 | about        | string | A brief description about you.                                          |
 | contactInfo  | object | An array of objects with the email, linkedin, and resumeDoc properties. |
 
-#### Example:
-
-```typescript
-export const ME = {
-    name: "John Doe",
-    profession: "Software Engineer | Full Stack Developer",
-    profileImage: "pp.png",
-    profileFacts: [
-        {
-            value: 10,
-            description: "Years of Experience"
-        },
-        {
-            value: 5,
-            description: "Completed Projects"
-        },
-        {
-            value: 4,
-            description: "Satisfied Clients"
-        }
-    ],
-    contactInfo: {
-        email: "vicbox.dev@vicbox.dev",
-        linkedin: "https://www.linkedin.com/in/victor-alvaradohn",
-        resumeDoc: "resume.pdf",
-    },
-    aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
-}
-````
 
 ---
 
@@ -302,9 +247,6 @@ some examples:
 - "Developed and maintained web applications using React, Node.Js, and MongoDB.",
 - "Worked with the team to develop and maintain web applications using React, Node.Js, and MongoDB.",
 - "Created and maintained web applications using React, NodeJ.s, and MongoDB."
-
-Read more about Action
-Verbs [here](https://www.coursera.org/articles/resume-action-words?utm_content=pmax_promo-q4-2024-latam_65percent_courseraplus-annual&utm_medium=sem&utm_source=gg&utm_campaign=B2C_LATAM_special_coursera_FTCOF_courseraplus_pmax-promo-2024Q4-LATAM&campaignid=21877631985&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOGYQZ5rp2focKXMltxHN6IAI55pqOTu_FP1kdh0A121Kfe05A_ZY5xoCRQ4QAvD_BwE).
 
 ---
 
