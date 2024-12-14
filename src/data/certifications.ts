@@ -4,7 +4,7 @@ interface Certifications {
     endDate?: string;
     school: string;
     location: string;
-    description: string;
+    icon: string;
     currentUni: boolean;
 }
 
@@ -15,16 +15,16 @@ const  certifications: Certifications[] = [
         endDate: "2018",
         school: "University of Carabobo",
         location: "Venezuela",
-        description: "",
-        currentUni: true,
+        icon: "wordpress_iconblue",
+        currentUni: false,
     },
     {
-        title: "Bachelor of Financial Management",
-        startDate: "2012",
-        endDate: "2015",
-        school: "Technical School Miguel Peña",
+        title: "PHP Course: Integration with HTML",
+        startDate: "2015",
+        endDate: "2018",
+        school: "University of Carabobo",
         location: "Venezuela",
-        description: "Developed and maintained web applications using React, NodeJs, and MongoDB.",
+        icon: "php_iconblue",
         currentUni: false,
     },
 ];
