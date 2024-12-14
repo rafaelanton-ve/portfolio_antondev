@@ -9,6 +9,7 @@ import JobDetails from "./JobDetails.astro";
 import {ME} from '@/config';
 import EduDetail from "./EduDetail.astro";
 import SkillCard from "./SkillCard.astro";
+import SkillsHards from "./SkillsHards.astro"
 ---
 
 <div class="relative flex flex-col gap-8 text-n700 dark:text-text-dark w-full mt-10 px-4">
@@ -39,11 +40,7 @@ import SkillCard from "./SkillCard.astro";
     {/*Skills section*/}
     <div class="mb-4">
         <h2 class="text-3xl font-bold mb-4">Hard Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {hardSkills.map((skill) => (
-                    <SkillCard {...skill} showDescription={true}/>
-            ))}
-        </div>
+            <SkillsHards />
     </div>
     {/*Hobbies section*/}
     <div class="mb-4">
