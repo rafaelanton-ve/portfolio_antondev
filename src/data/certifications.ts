@@ -16,7 +16,7 @@ const  certifications: Certifications[] = [
         school: "University of Carabobo",
         location: "Venezuela",
         icon: "wordpress_iconblue",
-        currentUni: false,
+        currentUni: true,
     },
     {
         title: "PHP Course: Integration with HTML",

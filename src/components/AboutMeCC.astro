@@ -10,6 +10,7 @@ import {ME} from '@/config';
 import EduDetail from "./EduDetail.astro";
 import SkillCard from "./SkillCard.astro";
 import SkillsHards from "./SkillsHards.astro"
+import Certifications from "./Certifications.astro"
 ---
 
 <div class="relative flex flex-col gap-8 text-n700 dark:text-text-dark w-full mt-10 px-4">
@@ -61,5 +62,9 @@ import SkillsHards from "./SkillsHards.astro"
                 ))
             }
         </div>
+    </div>
+    <div class="mb-4">
+        <h2 class="text-2xl font-bold mb-4">Certifications</h2>
+        <Certifications />
     </div>
 </div>
