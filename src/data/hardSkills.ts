@@ -1,6 +1,7 @@
 interface HardSkill {
   name: string;
   description: string;
+  icon: string;
   iconOne: string;
   iconTwo: string;
   iconThree: string;
