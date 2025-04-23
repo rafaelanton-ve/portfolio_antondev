@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileInfo from "../components/ProfileInfo.astro";
+import ProfileActionButton from "../components/ProfileActionButton.astro";
+import TabsButtons from "../components/TabsButtons.tsx";
+import ProjectsCC from '@/components/ProjectsCC.astro';
+import AboutMeCC from "../components/AboutMeCC.astro";
+import ProfileFacts from "../components/ProfileFacts.astro";
+---
+
+<Layout title="Rafael Anton | Portfolio | Home" scrollSmooth={false}>
+	<main class="container py-24 flex gap-8 flex-col">
+		<div class="Skills w-[360px] h-[586px] flex-col justify-start items-start gap-2 inline-flex">
+            <div class="SkillsTitleSection p-4 justify-start items-center gap-1.5 inline-flex">
+              <div class="LucideOrigami w-6 h-6 relative"></div>
+              <div class="Skills text-[#0ae98a] text-xl font-bold font-['IBM Plex Mono']">Skills</div>
+            </div>
+            <div class="Frame5 self-stretch h-[520px] py-3 bg-[#0ae98a] flex-col justify-center items-center gap-2 flex">
+              <div class="SkillsIcons h-[202px] p-4 flex-col justify-center items-center gap-2.5 flex">
+                <div class="Lenguages self-stretch h-[35px] justify-center items-center gap-4 inline-flex">
+                  <div class="Html5svg1 w-[35px] h-[35px] relative"></div>
+                  <div class="Css1 w-[35px] h-[35px] relative"></div>
+                  <div class="Jssvg1 w-[35px] h-[35px] relative"></div>
+                  <div class="Phpicon w-[35px] h-[35px] relative"></div>
+                </div>
+                <div class="Frameworks self-stretch justify-center items-center gap-4 inline-flex">
+                  <div class="Boostrapsvg1 w-[35px] h-[35px] relative"></div>
+                  <div class="Astrosvg1 w-[35px] h-[35px] relative"></div>
+                </div>
+                <div class="Cms self-stretch justify-center items-center gap-4 inline-flex">
+                  <div class="WordpressOrg1 w-[35px] h-[35px] pl-[2.95px] pr-[1.05px] pt-[2.94px] pb-[1.06px] justify-center items-center flex"></div>
+                  <div class="SimpleIconsWoo w-[35px] h-[35px] py-[7.08px] justify-center items-center flex"></div>
+                  <div class="SkillIconsWebflow w-[35px] h-[35px] justify-center items-center flex">
+                    <img class="Exclude w-[35px] h-[35px]" src="https://via.placeholder.com/35x35" />
+                  </div>
+                </div>
+                <div class="Tools self-stretch justify-center items-center gap-4 inline-flex">
+                  <div class="Gitsvg1 w-[35px] h-[35px] justify-center items-center flex">
+                    <div class="SvgrepoIconcarrier w-[35px] h-[35.01px] relative">
+                    </div>
+                  </div>
+                  <div class="Figmasvg1 w-[35px] h-[35px] px-[8.75px] py-[4.38px] justify-center items-center flex"></div>
+                </div>
+              </div>
+              <div class="LineDivision w-[299.03px] h-[0px] border border-[#13161c]"></div>
+              <div class="SkillsCertifications self-stretch h-[286px] flex-col justify-start items-start flex">
+                <div class="CertificationsTitleSection p-3 justify-start items-center gap-1.5 inline-flex">
+                  <div class="LucideShieldCheck w-6 h-6 relative"></div>
+                  <div class="Certifications text-[#13161c] text-xl font-bold font-['IBM Plex Mono']">Certifications</div>
+                </div>
+                <div class="CertificationsContent self-stretch p-3 justify-start items-start gap-3 inline-flex">
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="CursoPracticoDeHtmlCss self-stretch h-16 text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">Curso Practico de HTML&CSS</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                      <div class="Frame7 justify-start items-start gap-1.5 inline-flex">
+                        <div class="Html5svg1 w-[15px] h-[15px] relative"></div>
+                        <div class="FlowbiteCssSolid w-[15px] h-[15px] relative"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="CursoPracticoDeHtmlCss self-stretch h-16 text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">Curso Practico de HTML&CSS</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                      <div class="Html5svg1 w-[15px] h-[15px] relative"></div>
+                    </div>
+                  </div>
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="CursoPracticoDeHtmlCss self-stretch h-16 text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">Curso Practico de HTML&CSS</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                      <div class="Html5svg1 w-[15px] h-[15px] relative"></div>
+                    </div>
+                  </div>
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="CursoPracticoDeHtmlCss self-stretch h-16 text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">Curso Practico de HTML&CSS</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                      <div class="Html5svg1 w-[15px] h-[15px] relative"></div>
+                    </div>
+                  </div>
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="CursoPracticoDeHtmlCss self-stretch h-16 text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">Curso Practico de HTML&CSS</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                      <div class="Html5svg1 w-[15px] h-[15px] relative"></div>
+                    </div>
+                  </div>
+                  <div class="CentificationModel1 w-[100px] h-[100px] px-[9px] py-1 bg-[#6750a4]/0 rounded-[5px] border border-[#13161c] justify-start items-center gap-2.5 flex">
+                    <div class="Frame4 w-20 flex-col justify-start items-start gap-1.5 inline-flex">
+                      <div class="More self-stretch h-16 text-center text-[#13161c] text-xs font-bold font-['IBM Plex Mono']">More ...</div>
+                      <div class="Line1 self-stretch h-[0px] border border-[#13161c]"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</main>
+</Layout>

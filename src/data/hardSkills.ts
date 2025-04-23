@@ -1,10 +1,7 @@
 interface HardSkill {
   name: string;
   description: string;
-  iconOne: string;
-  iconTwo: string;
-  iconThree: string;
-  iconFour: string;
+  icon: string;
 }
 
 const hardSkills: HardSkill[] = [

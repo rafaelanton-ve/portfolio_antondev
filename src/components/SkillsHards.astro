@@ -1,63 +1,67 @@
 ---
 //fameworks
-import IconAstro from 'src/icons/astro_iconblue.svg';
-import IconWordpress from 'src/icons/wordpress_iconblue.svg';
-import IconBoostrap from 'src/icons/boostrap_iconblue.svg';
+import IconAstro from '/public/astro_iconblue.svg';
+import IconWordpress from '/public/wordpress_iconblue.svg';
+import IconBoostrap from '/public/boostrap_iconblue.svg';
 
 //Languages
-import IconPhp from 'src/icons/php_iconblue.svg';
-import IconHtml from 'src/icons/html_iconblue.svg';
-import IconCss from 'src/icons/css_iconblue.svg';
-import IconJs from 'src/icons/js_iconblue.svg';
+// import IconPhp from '/public/php_iconblue.svg';
+// import IconHtml from '../icons/html_iconblue.svg';
+// import IconCss from '/../icons/css_iconblue.svg';
+// import IconJs from '../icons/js_iconblue.svg';
 
 //Tools
-import IconNotion from 'src/icons/notion_iconblue.svg';
-import IconFigma from 'src/icons/figma_iconblue.svg';
+//import IconNotion from '../icons/notion_iconblue.svg';
+//import IconFigma from '../icons/figma_iconblue.svg';
 
 //CMC
-import IconWebflow from 'src/icons/webflow_iconblue.svg'
+//import IconWebflow from '../icons/webflow_iconblue.svg'
 ---
 
 <div class="content-icons">
-    <div class="subcontent-icons" id="frameworks">
-        <img src="/src/icons/astro_iconblue.svg" alt="">
+    <span class="subcontent-icons" id="frameworks">
+        <img src={IconAstro} alt="astro logo" />
+        <img src={IconWordpress} alt="wordpress logo" />
+        <img src={IconBoostrap} alt="boostrap logo" />
+    </span>
+    <span class="subcontent-icons" id="cms">
         <img src="/src/icons/wordpress_iconblue.svg" alt="">
         <img src="/src/icons/boostrap_iconblue.svg" alt="">
-    </div>
-    <div class="subcontent-icons" id="languages">
+    </span>
+    <span class="subcontent-icons" id="languages">
         <img src="/src/icons/js_iconblue.svg" alt="">
         <img src="/src/icons/html_iconblue.svg" alt="">
         <img src="/src/icons/css_iconblue.svg" alt="">
         <img src="/src/icons/php_iconblue.svg" alt="">
-    </div>
-    <div class="subcontent-icons" id="cms">
+    </span>
+    <span class="subcontent-icons" id="cms">
         <img src="/src/icons/webflow_iconblue.svg" alt="">
-    </div>
-    <div class="subcontent-icons" id="tools">
+    </span>
+    <span class="subcontent-icons" id="tools">
         <img src="/src/icons/figma_iconblue.svg" alt="">
         <img src="/src/icons/notion_iconblue.svg" alt="">
-    </div>
+    </span>
 </div>
 
 <style>
+    * { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .content-icons{
-        min-width: 360px;
-        padding-right: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
     }
     .subcontent-icons{
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        background-color: #0AE98A;
-        padding: 16px;
-        border-radius: 5px;
-        img{
-            width: 35px;
-            height: 35px;
-        }
+        width: auto;
+        padding: 8px;
+        margin: 8px;
+        display: inline-flex;
+        gap: 20px;
+        background: #0ae98a;
+        border-radius: 10px;
+    }
+    img{
+        width: 35px;
+        height: 35px;
     }
 </style>
