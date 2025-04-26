@@ -41,7 +41,8 @@ const certifications = defineCollection({
         location: z.string(),
         icon: z.string(),
         currentUni: z.boolean(),
-        technologies: z.array(z.string()).optional()
+        technologies: z.array(z.string()).optional(),
+        url: z.string().optional()
     }),
 });
 
