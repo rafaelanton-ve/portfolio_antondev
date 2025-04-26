@@ -31,5 +31,19 @@ const projects = defineCollection({
     }),
 });
 
+const certifications = defineCollection({
+    loader: glob({ pattern: "**/*.mdx", base: "./src/content/certifications" }),
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        startDate: z.date(),
+        endDate: z.date().optional(),
+        school: z.string(),
+        location: z.string(),
+        icon: z.string(),
+        currentUni: z.boolean(),
+        technologies: z.array(z.string()).optional()
+    }),
+});
+
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = {  projects };
+export const collections = { projects, certifications };
