@@ -21,7 +21,7 @@ const certifications = await getCollection('certifications');
                     <div class="tecnologiescard-certification">
                         {cert.data.technologies?.map((tech) => (
                             <img 
-                                src={`/icons/${tech.toLowerCase()}_iconblue.svg`} 
+                                src={`/${tech.toLowerCase()}_iconblue.svg`} 
                                 alt={`${tech} logo`} 
                                 class="icon-certification"
                             />
