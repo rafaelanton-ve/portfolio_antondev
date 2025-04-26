@@ -13,7 +13,9 @@ interface Project {
     };
 }
 
-const allProjects = await getCollection('projects');
+const allProjects = (await getCollection('projects')).filter(
+    (project) => !project.data.hidden && !project.data.draft
+);
 ---
 
 <Layout title="Rafael Anton | Portfolio | My Projects" description="A list of my best projects" scrollSmooth={false}>

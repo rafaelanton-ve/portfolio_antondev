@@ -1,8 +1,16 @@
 ---
-//fameworks
+import { Image } from 'astro:assets';
+// Importar todos los iconos desde la carpeta public
 import IconAstro from '/public/astro_iconblue.svg';
 import IconWordpress from '/public/wordpress_iconblue.svg';
 import IconBoostrap from '/public/boostrap_iconblue.svg';
+import IconPhp from '/public/php_iconblue.svg';
+import IconHtml from '/public/html_iconblue.svg';
+import IconCss from '/public/css_iconblue.svg';
+import IconJs from '/public/js_iconblue.svg';
+import IconNotion from '/public/notion_iconblue.svg';
+import IconFigma from '/public/figma_iconblue.svg';
+import IconWebflow from '/public/webflow_iconblue.svg';
 
 //Languages
 // import IconPhp from '/public/php_iconblue.svg';
@@ -20,26 +28,22 @@ import IconBoostrap from '/public/boostrap_iconblue.svg';
 
 <div class="content-icons">
     <span class="subcontent-icons" id="frameworks">
-        <img src={IconAstro} alt="astro logo" />
-        <img src={IconWordpress} alt="wordpress logo" />
-        <img src={IconBoostrap} alt="boostrap logo" />
-    </span>
-    <span class="subcontent-icons" id="cms">
-        <img src="/src/icons/wordpress_iconblue.svg" alt="">
-        <img src="/src/icons/boostrap_iconblue.svg" alt="">
+        <img src="/public/astro_iconblue.svg" alt="Astro logo" width="32" height="32" />
+        <img src="/public/wordpress_iconblue.svg" alt="WordPress logo" width="32" height="32" />
+        <img src="/public/boostrap_iconblue.svg" alt="Bootstrap logo" width="32" height="32" />
     </span>
     <span class="subcontent-icons" id="languages">
-        <img src="/src/icons/js_iconblue.svg" alt="">
-        <img src="/src/icons/html_iconblue.svg" alt="">
-        <img src="/src/icons/css_iconblue.svg" alt="">
-        <img src="/src/icons/php_iconblue.svg" alt="">
-    </span>
-    <span class="subcontent-icons" id="cms">
-        <img src="/src/icons/webflow_iconblue.svg" alt="">
+        <img src="/public/js_iconblue.svg" alt="JavaScript logo" width="32" height="32" />
+        <img src="/public/html_iconblue.svg" alt="HTML logo" width="32" height="32" />
+        <img src="/public/css_iconblue.svg" alt="CSS logo" width="32" height="32" />
+        <img src="/public/php_iconblue.svg" alt="PHP logo" width="32" height="32" />
     </span>
     <span class="subcontent-icons" id="tools">
-        <img src="/src/icons/figma_iconblue.svg" alt="">
-        <img src="/src/icons/notion_iconblue.svg" alt="">
+        <img src="/public/figma_iconblue.svg" alt="Figma logo" width="32" height="32" />
+        <img src="/public/notion_iconblue.svg" alt="Notion logo" width="32" height="32" />
+    </span>
+    <span class="subcontent-icons" id="cms">
+        <img src="/public/webflow_iconblue.svg" alt="Webflow logo" width="32" height="32" />
     </span>
 </div>
 
