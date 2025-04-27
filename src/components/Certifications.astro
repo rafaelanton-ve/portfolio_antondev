@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import { formatDatetime } from '../lib/utils';
 
-const certifications = await getCollection('certifications');
+const allCertifications = await getCollection('certifications');
+const certifications = allCertifications.slice(0, 5);
 ---
 
 <section class="certifications-skills bg-[#0AE98A] py-8">
@@ -11,37 +12,39 @@ const certifications = await getCollection('certifications');
             <h2 class="text-3xl font-bold mb-4">Certifications</h2>
         </div>
     </div>
-    <div class="content-certifications">
-        {certifications.map((cert) => {
-            const url = cert.data.url;
-            return (
-                <div class="card-certification">
-                    {url ? (
-                        <a href={url} target="_blank" rel="noopener noreferrer" class="title-link">
+    <div class="certifications-container">
+        <div class="certifications-scroll">
+            {certifications.map((cert) => {
+                const url = cert.data.url;
+                return (
+                    <div class="card-certification">
+                        {url ? (
+                            <a href={url} target="_blank" rel="noopener noreferrer" class="title-link">
+                                <h4 class="titlecard-certification">{cert.data.title}</h4>
+                            </a>
+                        ) : (
                             <h4 class="titlecard-certification">{cert.data.title}</h4>
-                        </a>
-                    ) : (
-                        <h4 class="titlecard-certification">{cert.data.title}</h4>
-                    )}
-                    <div class="tecnologiescard-certification">
-                        {cert.data.technologies?.map((tech) => (
-                            <img 
-                                src={`/${tech.toLowerCase()}_iconblue.svg`} 
-                                alt={`${tech} logo`} 
-                                class="icon-certification"
-                            />
-                        ))}
+                        )}
+                        <div class="tecnologiescard-certification">
+                            {cert.data.technologies?.map((tech) => (
+                                <img 
+                                    src={`/${tech.toLowerCase()}_iconblue.svg`} 
+                                    alt={`${tech} logo`} 
+                                    class="icon-certification"
+                                />
+                            ))}
+                        </div>
+                        <div class="certification-details">
+                            <p class="school">{cert.data.school}</p>
+                            <p class="date">
+                                {formatDatetime(cert.data.startDate)} - 
+                                {cert.data.currentUni ? 'Present' : formatDatetime(cert.data.endDate)}
+                            </p>
+                        </div>
                     </div>
-                    <div class="certification-details">
-                        <p class="school">{cert.data.school}</p>
-                        <p class="date">
-                            {formatDatetime(cert.data.startDate)} - 
-                            {cert.data.currentUni ? 'Present' : formatDatetime(cert.data.endDate)}
-                        </p>
-                    </div>
-                </div>
-            );
-        })}
+                );
+            })}
+        </div>
     </div>
 </section>
 
@@ -53,14 +56,32 @@ const certifications = await getCollection('certifications');
         --violeta-opacity: rgba(103, 80, 164, 0.2);
     }
     
-    .content-certifications {
+    .certifications-container {
         width: 100%;
-        height: auto;
-        padding: 16px;
+        overflow-x: auto;
+        padding: 1rem 0;
+        scrollbar-width: thin;
+        scrollbar-color: var(--azul_platzi) transparent;
+    }
+
+    .certifications-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .certifications-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .certifications-container::-webkit-scrollbar-thumb {
+        background-color: var(--azul_platzi);
+        border-radius: 20px;
+    }
+    
+    .certifications-scroll {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 16px;
+        gap: 1rem;
+        padding: 0 1rem;
+        width: max-content;
     }
     
     .card-certification {
@@ -73,6 +94,7 @@ const certifications = await getCollection('certifications');
         border-radius: 5px;
         padding: 16px;
         background: var(--violeta-opacity);
+        flex-shrink: 0;
     }
     
     .title-link {
