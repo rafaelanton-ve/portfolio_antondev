@@ -10,14 +10,16 @@ import Certifications from "../components/Certifications.astro";
 ---
 
 <Layout title="Rafael Anton | Portfolio | Home" scrollSmooth={false}>
-	<main class="container py-24 flex gap-8 flex-col">
-		<ProfileInfo />
-		<ProfileFacts />
-		<ProfileActionButton />
-		<TabsButtons client:idle >
-			<ProjectsCC slot="portfolio" />
-			<AboutMeCC slot="about" />
-		</TabsButtons>
+	<main class="flex flex-col gap-8">
+		<div class="container py-24 flex gap-8 flex-col">
+			<ProfileInfo />
+			<ProfileFacts />
+			<ProfileActionButton />
+			<TabsButtons client:idle >
+				<ProjectsCC slot="portfolio" />
+				<AboutMeCC slot="about" />
+			</TabsButtons>
+		</div>
 		<Certifications />
 	</main>
 </Layout>
