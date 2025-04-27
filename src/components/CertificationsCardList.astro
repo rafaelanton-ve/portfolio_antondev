@@ -1,0 +1,134 @@
+import { getCollection } from 'astro:content';
+import formatDatetime from '../lib/formatDatetime';
+import Button from '@/components/ui/button';
+
+const allCertifications = await getCollection('certifications');
+const certifications = allCertifications.slice(0, 5);
+
+<div class="certifications-list-container">
+    <div class="certifications-scroll">
+        {certifications.map((cert) => {
+            const url = cert.data.url;
+            return (
+                <div class="card-certification">
+                    {url ? (
+                        <a href={url} target="_blank" rel="noopener noreferrer" class="title-link">
+                            <h4 class="titlecard-certification">{cert.data.title}</h4>
+                        </a>
+                    ) : (
+                        <h4 class="titlecard-certification">{cert.data.title}</h4>
+                    )}
+                    <div class="tecnologiescard-certification">
+                        {cert.data.technologies?.map((tech) => (
+                            <img 
+                                src={`/${tech.toLowerCase()}_iconblue.svg`} 
+                                alt={`${tech} logo`} 
+                                class="icon-certification"
+                            />
+                        ))}
+                    </div>
+                    <div class="certification-details">
+                        <p class="school">{cert.data.school}</p>
+                        <p class="date">
+                            {formatDatetime(cert.data.startDate)} - 
+                            {cert.data.currentUni ? 'Present' : formatDatetime(cert.data.endDate)}
+                        </p>
+                    </div>
+                </div>
+            );
+        })}
+        {allCertifications.length > 5 && (
+            <div class="card-certification flex items-center justify-center">
+                <Button className="[&_svg]:size-8 text-n700 bg-primary-light dark:bg-primary-dark hover:bg-primary-hover-light dark:hover:bg-primary-hover-dark">
+                    <a href="/certifications">Ver Todas las Certificaciones</a>
+                </Button>
+            </div>
+        )}
+    </div>
+</div>
+
+<style>
+    .certifications-list-container {
+        width: 100%;
+        overflow-x: auto;
+        padding: 1rem 0;
+        scrollbar-width: thin;
+        scrollbar-color: var(--azul_platzi) transparent;
+    }
+
+    .certifications-list-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .certifications-list-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .certifications-list-container::-webkit-scrollbar-thumb {
+        background-color: var(--azul_platzi);
+        border-radius: 20px;
+    }
+
+    .certifications-scroll {
+        display: flex;
+        gap: 1rem;
+        padding: 0 1rem;
+        width: max-content;
+    }
+
+    .card-certification {
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 2px dashed var(--azul_platzi);
+        border-radius: 5px;
+        padding: 16px;
+        background: var(--violeta-opacity);
+        flex-shrink: 0;
+    }
+    
+    .title-link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
+    .title-link:hover {
+        color: var(--violeta_platzi);
+    }
+    
+    .titlecard-certification {
+        font-size: 14px;
+        color: var(--azul_platzi);
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    .tecnologiescard-certification {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 8px 0;
+    }
+    
+    .icon-certification {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .certification-details {
+        margin-top: 8px;
+        font-size: 12px;
+        color: var(--azul_platzi);
+    }
+    
+    .school {
+        font-weight: bold;
+    }
+    
+    .date {
+        font-style: italic;
+    }
+</style> 
