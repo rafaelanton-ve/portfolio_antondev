@@ -5,7 +5,10 @@ import { formatDatetime } from '../lib/utils';
 const certifications = await getCollection('certifications');
 ---
 
-<div class="certifications-skills">
+<section class="certifications-skills">
+    <div class="mb-4">
+        <h2 class="text-3xl font-bold mb-4">Certifications</h2>
+    </div>
     <div class="content-certifications">
         {certifications.map((cert) => {
             const url = cert.data.url;
@@ -38,7 +41,7 @@ const certifications = await getCollection('certifications');
             );
         })}
     </div>
-</div>
+</section>
 
 <style>
     :root {
