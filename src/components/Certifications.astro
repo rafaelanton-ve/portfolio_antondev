@@ -5,9 +5,11 @@ import { formatDatetime } from '../lib/utils';
 const certifications = await getCollection('certifications');
 ---
 
-<section class="certifications-skills">
-    <div class="mb-4">
-        <h2 class="text-3xl font-bold mb-4">Certifications</h2>
+<section class="certifications-skills bg-[#0AE98A] py-8">
+    <div class="container">
+        <div class="mb-4">
+            <h2 class="text-3xl font-bold mb-4">Certifications</h2>
+        </div>
     </div>
     <div class="content-certifications">
         {certifications.map((cert) => {
@@ -58,7 +60,6 @@ const certifications = await getCollection('certifications');
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        background: var(--verde_platzi);
         gap: 16px;
     }
     
